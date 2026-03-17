@@ -16,13 +16,13 @@
 <body>
 
   <!-- Header -->
-  <header>
+  <header id="header">
     <h1>Colegio Estadual São Cristovap</h1>
     <p class="highlight">Aprenda, Inove e Transforme o Futuro!</p>
   </header>
 
-  <!-- Navegação -->
-  <nav>
+  <!-- Navegação fixa -->
+  <nav id="navbar">
     <a href="#Home">Home</a>
     <a href="#Sobre">Sobre Nós</a>
     <a href="#Cursos">Cursos</a>
@@ -32,55 +32,44 @@
   </nav>
 
   <!-- Home -->
-  <section id="Home">
+  <section id="Home" class="fade-in">
     <h2>Bem-vindo ao São Cristovap!</h2>
-    <p>Um colégio que combina educação de excelência, tecnologia de ponta e experiências únicas para todos os alunos.</p>
+    <p>O colégio que combina educação de excelência, tecnologia e experiências únicas para todos os alunos. Aqui, cada estudante encontra espaço para crescer, aprender e descobrir seu verdadeiro potencial.</p>
   </section>
 
   <!-- Sobre -->
-  <section id="Sobre">
+  <section id="Sobre" class="fade-in">
     <h2>Sobre o Colégio</h2>
-    <p>Localizado no bairro São Cristóvão, em Capanema - PR, oferecemos ensino de qualidade, professores excelentes, alimentação saudável e um ambiente acolhedor.</p>
+    <p>Localizado no bairro São Cristóvão, em Capanema - PR, o Colégio Estadual São Cristovap oferece ensino de qualidade, professores altamente capacitados, alimentação saudável e um ambiente acolhedor.</p>
+    <p>Nosso objetivo é formar cidadãos críticos, criativos e preparados para o futuro.</p>
   </section>
 
   <!-- Cursos -->
-  <section id="Cursos">
+  <section id="Cursos" class="fade-in">
     <h2>Curso Técnico de Desenvolvimento</h2>
     <div class="card-container">
       <div class="card">
         <img src="curso_dev.jpg" alt="Curso Técnico de Desenvolvimento">
         <h3>Técnico de Desenvolvimento</h3>
-        <p>Iniciado em 2024, prepara você para se tornar um desenvolvedor capacitado. Ao final, você receberá certificado.</p>
+        <p>Iniciado em 2024, este curso prepara você para se tornar um profissional em TI. Ao final, você receberá certificado reconhecido.</p>
         <a href="#Contato" class="btn">Saiba Mais</a>
       </div>
     </div>
   </section>
 
-  <!-- Galeria com 4 fotos -->
-  <section id="Galeria">
+  <!-- Galeria de Fotos -->
+  <section id="Galeria" class="fade-in">
     <h2>Galeria da Escola</h2>
     <div class="galeria-container">
-      <div class="foto-card">
-        <img src="foto1.jpg" alt="Foto 1 da Escola">
-        <p>Entrada Principal</p>
-      </div>
-      <div class="foto-card">
-        <img src="foto2.jpg" alt="Foto 2 da Escola">
-        <p>Laboratórios Modernos</p>
-      </div>
-      <div class="foto-card">
-        <img src="foto3.jpg" alt="Foto 3 da Escola">
-        <p>Área de Recreação</p>
-      </div>
-      <div class="foto-card">
-        <img src="foto4.jpg" alt="Foto 4 da Escola">
-        <p>Biblioteca e Salas de Estudo</p>
-      </div>
+      <div class="foto-card"><img src="foto1.jpg" alt="Foto 1"><p>Entrada Principal</p></div>
+      <div class="foto-card"><img src="foto2.jpg" alt="Foto 2"><p>Laboratórios</p></div>
+      <div class="foto-card"><img src="foto3.jpg" alt="Foto 3"><p>Área de Recreação</p></div>
+      <div class="foto-card"><img src="foto4.jpg" alt="Foto 4"><p>Biblioteca</p></div>
     </div>
   </section>
 
   <!-- Projetos -->
-  <section id="Projetos">
+  <section id="Projetos" class="fade-in">
     <h2>Projetos Inovadores</h2>
     <div class="card-container">
       <div class="card">
@@ -93,19 +82,22 @@
       </div>
       <div class="card">
         <h3>Oficinas de Arte e Música</h3>
-        <p>Espaço para desenvolver a criatividade com atividades artísticas, teatro e música.</p>
+        <p>Espaço para desenvolver criatividade com atividades artísticas, teatro e música.</p>
       </div>
     </div>
   </section>
 
   <!-- Contato -->
-  <section id="Contato">
+  <section id="Contato" class="fade-in">
     <h2>Contato</h2>
     <p>Email: contato@sãocristovap.com.br</p>
     <p>Telefone: (45) 99999-9999</p>
     <p>Endereço: Rua Exemplo, 123 - Bairro São Cristóvão, Capanema - PR</p>
     <a href="mailto:contato@sãocristovap.com.br" class="btn">Enviar Email</a>
   </section>
+
+  <!-- Botão voltar ao topo -->
+  <button id="btnTopo">⬆ Topo</button>
 
   <!-- Footer -->
   <footer>
@@ -115,5 +107,4 @@
   <!-- JS -->
   <script src="script.js"></script>
 </body>
-
 </html>
