@@ -6,161 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colegio Estadual São Cristovap</title>
 
-  <!-- Google Fonts para letras chamativas -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f0f8ff;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(90deg, #ff416c, #ff4b2b);
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-      font-family: 'Fredoka One', cursive;
-    }
-
-    header h1 {
-      font-size: 3em;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-
-    nav {
-      background-color: #ffb347;
-      padding: 15px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 0 15px;
-      font-size: 1.1em;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ff416c;
-      transform: scale(1.1);
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h2 {
-      font-family: 'Fredoka One', cursive;
-      font-size: 2.2em;
-      margin-bottom: 20px;
-      color: #ff4b2b;
-      text-align: center;
-    }
-
-    p {
-      font-size: 1.1em;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    /* Cards para cursos/projetos */
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .card {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      width: 300px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    /* Botões chamativos */
-    .btn {
-      display: inline-block;
-      background: #ff416c;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #ff4b2b;
-      transform: scale(1.1);
-    }
-
-    /* Galeria de imagens */
-    .img-container {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .img-container img {
-      max-width: 80%;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      margin-bottom: 15px;
-      transition: transform 0.3s ease;
-    }
-
-    .img-container img:hover {
-      transform: scale(1.05);
-    }
-
-    footer {
-      background-color: #ff4b2b;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-
-    /* Efeitos com JavaScript */
-    .highlight {
-      animation: highlightAnim 1s infinite alternate;
-    }
-
-    @keyframes highlightAnim {
-      0% { color: #ff416c; }
-      50% { color: #ffb347; }
-      100% { color: #ff416c; }
-    }
-  </style>
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -219,13 +69,7 @@
     &copy; 2026 Colegio Estadual São Cristovap. Todos os direitos reservados.
   </footer>
 
-  <script>
-    // Texto piscando no header (função extra de destaque)
-    const highlight = document.querySelector('.highlight');
-    setInterval(() => {
-      highlight.style.opacity = highlight.style.opacity == 0 ? 1 : 0;
-    }, 800);
-  </script>
-
+  <!-- JS externo -->
+  <script src="script.js"></script>
 </body>
 </html>
