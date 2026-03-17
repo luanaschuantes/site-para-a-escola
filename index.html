@@ -1,125 +1,231 @@
-index.html
-<!DOCPYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-<meta charset+"UTF-8">
-<meta name+"viewport"content+"width+device-width,initial-scale+1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colegio Estadual São Cristovap</title>
 
-<title>Colégio São cristóvão</title>
-<style>
-body {
-font-family: Sans Serif;
-margin: 0;
-padding: 0;
-}
-header {
-background-color:
+  <!-- Google Fonts para letras chamativas -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-#007bff;
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-color: white;
-padding: 20px;
-text align: center;
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+      line-height: 1.6;
+    }
 
-}
-nav {
+    header {
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-family: 'Fredoka One', cursive;
+    }
 
-background color:
-#f8f9fa;
+    header h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
 
-padding: 10px;
-}
-nav ul {
-list style: none;
-margin: 0;
-padding: 0;
-text allign: center; /* centraliza os links */
-}
+    nav {
+      background-color: #ffb347;
+      padding: 15px;
+      text-align: center;
+    }
 
-nav li {
-display; inline;
-margin: 0 10px;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+    }
 
-section {
-padding: 20px
-}
+    nav a:hover {
+      color: #ff416c;
+      transform: scale(1.1);
+    }
 
-footer{
-background-color: #333;
-color: white;
-padding: 10px;
-text-allign:center;
-}
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-/* estilos para as imagens */
+    h2 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #ff4b2b;
+      text-align: center;
+    }
 
-.img container {
-text-allign:center; /* centraliza as imagens */
+    p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-margin-bottom: 20px;/* adiciona espaço abaixo das imagens */
-}
+    /* Cards para cursos/projetos */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
 
-.img-container img{
-max width: 50%; /*largura máxima da imagem*/
-height: auto; /*altura automática para manter a proporção*/
-border-radius: 8px; /*borda arredondada*/
-box-shadow: 0 4px 8px rgba (0,0,0,0,1); /*sombra suave*/
-}
-</style>
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    /* Botões chamativos */
+    .btn {
+      display: inline-block;
+      background: #ff416c;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ff4b2b;
+      transform: scale(1.1);
+    }
+
+    /* Galeria de imagens */
+    .img-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .img-container img {
+      max-width: 80%;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .img-container img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #ff4b2b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    /* Efeitos com JavaScript */
+    .highlight {
+      animation: highlightAnim 1s infinite alternate;
+    }
+
+    @keyframes highlightAnim {
+      0% { color: #ff416c; }
+      50% { color: #ffb347; }
+      100% { color: #ff416c; }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-<h1>Colégio São Cristóvão</h1>
-<p>Ensino de qualidade para um futuro brilhante</p>
-</header>
-<nav>
-<ul>
-<li><a href="#">Sobre nos</a></li>
-<li><a href="#">Cursos</a></li>
-<li><a href="#">Noticias</a></li>
-<li><a href="#">Contato</a></li>
+  <header>
+    <h1>Colegio Estadual São Cristovap</h1>
+    <p class="highlight">O futuro do desenvolvimento começa aqui!</p>
+  </header>
 
-</ul>
-</nav>
-<section>
-<h2>Bem-Vindos ao Colégio São Cristóvão</h2>
-<p>Nossa escola oferece um ambiente acolhedor e inovador, com professores qualificados que visam o desenvolvimento integral dos alunos</p>
-<div class="img-container">
-<img src="escola1.jpg"alt="imagem da escola">
-</div>
+  <nav>
+    <a href="#Sobre">Sobre nós</a>
+    <a href="#Cursos">Cursos</a>
+    <a href="#Galeria">Galeria</a>
+    <a href="#Contato">Contato</a>
+  </nav>
 
-<div class="img-container">
-<img src="escola2.jpg"alt="imagem da escola">
-</div>
+  <!-- Sobre -->
+  <section id="Sobre">
+    <h2>Bem-vindos ao São Cristovap</h2>
+    <p>Localizado no bairro São Cristóvão, em Capanema - PR, nosso colégio oferece ensino de qualidade com professores excelentes e alimentação de primeira para nossos alunos!</p>
+  </section>
 
-<div class="img-container">
-<img src="escola4.jpg"alt="imagem da escola">
-</div>
+  <!-- Cursos -->
+  <section id="Cursos">
+    <h2>Curso Técnico de Desenvolvimento</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="curso_dev.jpg" alt="Curso Técnico de Desenvolvimento">
+        <h3>Técnico de Desenvolvimento</h3>
+        <p>Iniciado em 2024, este curso prepara você para se tornar um desenvolvedor capacitado, com habilidades práticas e certificação ao final do curso.</p>
+        <a href="#Contato" class="btn">Saiba Mais</a>
+      </div>
+    </div>
+  </section>
 
-<h3>Nossos diferenciais</h3>
-<ul>
-<li>En<sino personalizado</li>
-<li>Tecnologia em sala de aula</li>
-<li>Projetos interdiciplinares</li>
-<li>foco no desenvolvimento de habilidades</li>
-</ul>
-</section>
+  <!-- Galeria -->
+  <section id="Galeria">
+    <h2>Galeria</h2>
+    <div class="img-container">
+      <img src="professores.jpg" alt="Professores excelentes">
+      <img src="alunos.jpg" alt="Alunos em atividade">
+      <img src="alimentacao.jpg" alt="Alimentação">
+    </div>
+  </section>
 
-<section id="Cursos">
-</section>
+  <!-- Contato -->
+  <section id="Contato">
+    <h2>Contato</h2>
+    <p>Email: contato@sãocristovap.com.br</p>
+    <p>Telefone: (45) 99999-9999</p>
+    <p>Endereço: Rua Exemplo, 123 - Bairro São Cristóvão, Capanema - PR</p>
+    <a href="mailto:contato@sãocristovap.com.br" class="btn">Enviar Email</a>
+  </section>
 
-<section id="Notícias">
-</section>
+  <footer>
+    &copy; 2026 Colegio Estadual São Cristovap. Todos os direitos reservados.
+  </footer>
 
-<section id="Contato">
-</section>
-<footer>
-<p>&copy;2025 Colégio São Cristóvão. Todos os direitos reservados.</p>
+  <script>
+    // Texto piscando no header (função extra de destaque)
+    const highlight = document.querySelector('.highlight');
+    setInterval(() => {
+      highlight.style.opacity = highlight.style.opacity == 0 ? 1 : 0;
+    }, 800);
+  </script>
 
-</footer>
 </body>
 </html>
