@@ -10,150 +10,45 @@ body {
   background: #f0f8ff;
   color: #333;
   line-height: 1.6;
-  transition: background 0.3s ease; /* Suaviza a transição de fundo caso altere */
-}
-
-/* Variáveis para cores */
-:root {
-  --cor-principal: #ff416c;
-  --cor-secundaria: #ff4b2b;
-  --cor-destaque: #ffb347;
-  --cor-fundo: #f0f8ff;
-  --cor-texto: #333;
-  --cor-branco: #fff;
-}
-
-/* Header */
-header {
-  background: linear-gradient(90deg, var(--cor-principal), var(--cor-secundaria));
-  color: var(--cor-branco);
-  padding: 60px 20px;
-  text-align: center;
-  font-family: 'Fredoka One', cursive;
-}
-
-header h1 {
-  font-size: 3em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.highlight {
-  font-size: 1.5em;
-  animation: highlightAnim 1s infinite alternate;
-}
-
-@keyframes highlightAnim {
-  0% {
-    color: var(--cor-principal);
-  }
-  50% {
-    color: var(--cor-destaque);
-  }
-  100% {
-    color: var(--cor-principal);
-  }
+  transition: background 0.3s ease;
 }
 
 /* Navbar Fixa */
 nav {
-  position: sticky;
-  top: 0;
-  background: var(--cor-destaque);
+  background: #ff416c;
   padding: 15px;
   text-align: center;
-  z-index: 100;
 }
 
 nav a {
-  color: var(--cor-branco);
+  color: white;
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
   font-size: 1.1em;
-  transition: all 0.3s ease;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: var(--cor-principal);
-  transform: scale(1.1);
+  color: #ffb347;
 }
 
-/* Seções */
-section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: auto;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-}
-
-section.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-h2 {
-  font-family: 'Fredoka One', cursive;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: var(--cor-secundaria);
-  text-align: center;
-}
-
-p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Cards (para cursos e projetos) */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.card {
-  background: var(--cor-branco);
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  width: 300px;
+/* Conteúdo das seções */
+.content {
   padding: 20px;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+h1, h2 {
+  color: #ff416c;
   text-align: center;
-  transition: all 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-/* Botões */
-.btn {
-  display: inline-block;
-  background: var(--cor-principal);
-  color: var(--cor-branco);
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background: var(--cor-secundaria);
-  transform: scale(1.1);
-}
-
-/* Galeria de Fotos */
+/* Estilos dos cards de foto */
 .galeria-container {
   display: flex;
   flex-wrap: wrap;
@@ -163,7 +58,7 @@ p {
 }
 
 .foto-card {
-  background: var(--cor-branco);
+  background: #fff;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   width: 250px;
@@ -173,49 +68,34 @@ p {
 }
 
 .foto-card img {
-  width: 100%;
+  width: 100%; /* Faz a imagem ocupar 100% do card */
   border-radius: 10px;
   margin-bottom: 10px;
   transition: transform 0.3s ease;
 }
 
 .foto-card img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Efeito de zoom quando a imagem é passada o mouse */
 }
 
 .foto-card p {
   font-weight: bold;
-  color: var(--cor-principal);
+  color: #ff416c;
   font-family: 'Fredoka One', cursive;
 }
 
-/* Botão Voltar ao Topo */
-#btnTopo {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 15px;
-  background: var(--cor-principal);
-  color: var(--cor-branco);
-  border-radius: 50%;
-  border: none;
-  font-size: 1.5em;
-  cursor: pointer;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-#btnTopo:hover {
-  background: var(--cor-secundaria);
-  transform: scale(1.1);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-
-/* Footer */
-footer {
-  background-color: #333;
-  color: var(--cor-branco);
+/* Botões de navegação */
+.btn {
+  background: #ff416c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
   text-align: center;
-  padding: 20px;
-  font-size: 1.1em;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #ff4b2b;
 }
